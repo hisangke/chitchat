@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	//utils.go
 	p("ChitChat", version(), "started at", config.Address)
 
 	// handle static assets
@@ -22,7 +23,7 @@ func main() {
 	// all route patterns matched here
 	// route handler functions defined in other files
 	//
-
+	//route_main.go
 	// index
 	mux.HandleFunc("/", index)
 	// error
