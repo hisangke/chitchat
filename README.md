@@ -26,9 +26,15 @@
 
 ## 运行
 1. 首先把源代码下载下来：
+
 ```shell
 git clone https://github.com/liu-jianhao/chitchat.git
+sudo apt-get install postgresql postgresql-contrib
+sudo vi /etc/postgresql/9.5/main/pg_hba.conf : local   all             postgres                                peer ---> local   all             postgres                                md5
+sudo service postgresql restart
+sudo -u postgres psql --> ALTER USER postgres WITH PASSWORD 'user';
 ```
+
 2. 根据实际情况修改代码中的data包的路径，还有data目录下的data.go中连接数据库的参数
 3. 创建数据表（以用户名为chitchat为例，在data目录下执行）：
 ```shell
