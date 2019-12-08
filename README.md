@@ -29,9 +29,9 @@
 
 ```shell
 git clone https://github.com/liu-jianhao/chitchat.git
-sudo apt-get install postgresql postgresql-contrib
+sudo apt-get update && sudo apt-get install postgresql postgresql-client
 sudo vi /etc/postgresql/9.5/main/pg_hba.conf : local   all             postgres                                peer ---> local   all             postgres                                md5
-sudo service postgresql restart
+sudo service postgresql restart  //sudo /etc/init.d/postgresql start/stop/restart
 sudo -u postgres psql --> ALTER USER postgres WITH PASSWORD 'user';
 ```
 
