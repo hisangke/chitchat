@@ -38,7 +38,7 @@ sudo -u postgres psql --> ALTER USER postgres WITH PASSWORD 'user';
 2. 根据实际情况修改代码中的data包的路径，还有data目录下的data.go中连接数据库的参数
 3. 创建数据表（以用户名为chitchat为例，在data目录下执行）：
 ```shell
-psql -U chitchat -f setup.sql
+psql -U postgres -f setup.sql
 ```
 4. 返回main.go所在的目录：
 ```shell
